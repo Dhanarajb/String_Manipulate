@@ -26,7 +26,7 @@ function palindrome(str) {
 
 console.log(palindrome("nayan"));
 ```
----`
+---
 ####  Count the number of vowels in a string.
 ```
 function countVowels(str){

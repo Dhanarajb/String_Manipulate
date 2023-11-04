@@ -6,7 +6,6 @@ function reverseString(str){
 }
 console.log(reverseString("tech"))
 ```
----
 ```
 function reverseStringUsingLoop(str){
   let reverse = ''

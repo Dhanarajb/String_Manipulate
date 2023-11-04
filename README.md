@@ -76,7 +76,6 @@ console.log(removeWhiteSpace("   dhanu   "))
 ####  Replace all occurrences of a substring in a string.
 ```
 function replaceAllOccurrences(inputString, search, replacement) {
-  ####  Use a regular expression with the 'g' flag to replace all occurrences
   const regex = new RegExp(search, 'g');
   const result = inputString.replace(regex, replacement);
   return result;

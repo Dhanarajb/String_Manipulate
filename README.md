@@ -122,37 +122,119 @@ console.log(checkIfNum("1234sss"))
 ---
 
 ####  Check if a string contains only alphabetic characters.
-
+```
+ function checkAlp(str){
+   for(let item of str){
+     if(!isNaN(item)){
+       return false
+     }
+   }
+   return true
+ }
+ console.log(checkAlp("snsn"))
+```
 ---
 
 ####  Check if two strings are anagrams of each other.
+```
+function angramString(str1,str2){
+     let strMatch1 = str1.split("").sort().join("")
+     let strMatch2 = str2.split("").sort().join("")
+     return strMatch1 === strMatch2
+   }
+   console.log(angramString("silent", "listen"))
+```
 ---
 
 ####  Count the occurrences of a specific character in a string.
+```
+ function countOcc(str){
+     let obj={}
+     for(let char of str){
+       !obj[char]? (obj[char]=1):obj[char]++
+     }
+     return obj
+   }
+   console.log(countOcc("njdjnjndjn"))
+```
 ---
 
 ####  Find the first non-repeated character in a string.
+```
+function nonRepeat(str){
+     let obj = {}
+     for(let char of str){
+       !obj[char] ? (obj[char]=1) : obj[char]++
+     }
+     console.log(obj)
+
+     for(let char of str){
+       if(obj[char]===1){
+         return char
+       }
+     }
+     return null
+   }
+   console.log(nonRepeat("dnknkknf"))
+```
 ---
 
 ####  Remove duplicates from a string.
+```
+let dup = ""
+     for(let char of str){
+       if(dup.includes(char)==false){
+         dup += char
+       }
+     }
+     return dup
+   }
+   console.log(duplicateString("dhanaasjs"))
+```
+```
+function removeDuplicates(inputString) {
+    let uniqueCharacters = "";
+    const charSet = new Set();
+  
+    for (const char of inputString) {
+      if (!charSet.has(char)) {
+        uniqueCharacters += char;
+        charSet.add(char);
+      }
+    }
+  
+    return uniqueCharacters;
+  }
+console.log(removeDuplicates("djdnns"))
+```
 ---
 
 ####  Reverse the words in a sentence.
----
-
-####  Convert a sentence to title case.
----
-
-####  Check if a string is a valid email address.
----
-
-####  Check if a string is a valid URL.
+```
+function reverseWord(str){
+  return str.split(" ").reverse().join(" ")
+}
+console.log("i am dhanu")
+console.log(reverseWord("i am dhanu"))
+```
 ---
 
 ####  Find the common characters between two strings.
----
+```
+function commonChar(str1, str2) {
+  let commonChars = [];
+  
+  for (let char of str1) {
+    if (str2.includes(char) && !commonChars.includes(char)) {
+      commonChars.push(char);
+    }
+  }
+  
+  return commonChars.join('');
+}
 
-####  Check if a string is a valid IPv4 address.
+console.log(commonChar("ssjsj", "dhshdhb"));
+```
 ---
 
 

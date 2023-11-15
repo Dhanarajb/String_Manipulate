@@ -236,5 +236,25 @@ function commonChar(str1, str2) {
 console.log(commonChar("ssjsj", "dhshdhb"));
 ```
 ---
-
+#### Spcae before Capital Letter
+```
+function addSpacesWithoutPattern(inputString) {
+  var outputString = "";
+  
+  for (var i = 0; i < inputString.length; i++) {
+    var currentChar = inputString[i];
+    
+    if (currentChar === currentChar.toUpperCase() && i > 0) {
+      outputString += " " + currentChar;
+    } else {
+      outputString += currentChar;
+    }
+  }
+  
+  return outputString;
+}
+var input = "MyNameIsJohn";
+var output = addSpacesWithoutPattern(input);
+console.log(output);
+```
 

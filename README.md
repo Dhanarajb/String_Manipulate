@@ -53,15 +53,15 @@ console.log(countWords("i am Dhanaraj"))
 ---
 ####  Capitalize the first letter of each word in a sentence.
 ```
-function capitalizeFirstLetter(str) {
-  let splitArr = str.split(" ");
-  for (let i = 0; i < splitArr.length; i++) {
-    splitArr[i] = splitArr[i].charAt(0).toUpperCase() + splitArr[i].slice(1);
-  }
-  return splitArr.join(" "); 
+function firstLetterForEveryWord(str) {
+  return str
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
-console.log(capitalizeFirstLetter("dhanu ddnjnj dnjnjd"));
+console.log(firstLetterForEveryWord('dhanaraj basavaraj bhaskar'));
+
 ```
 ---
 ####  Remove all whitespace from a string.
